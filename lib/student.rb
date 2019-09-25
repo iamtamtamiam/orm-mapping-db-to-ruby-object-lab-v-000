@@ -20,7 +20,9 @@ class Student
     # return a new instance of the Student class
     sql = <<-SQL
       SELECT name FROM students where name = "name"
-    SQL 
+    SQL
+    
+    DB[:conn].execute(sql)
   end
   
   def save
